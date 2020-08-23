@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button[type=submit]{
+  background-color: SlateBlue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 10%;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color:SlateBlue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: SlateBlue;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;Enter
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body style="background-color:LightGray">
+
+<center>
+<h2>Please choose an option</h2><br>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><b>Choose fields from Students Table</b></button>
+
+</center>
+
+<div id="id01" class="modal">
+  <form class ="modal-content animate" method = "post" action = "dynamic_select_student.php">
+    <div class="container">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+      <div class="container">
+        <label for="var"><b>Enter fields from table Students in the specific format: (username, firstname, lastname, email, semester): </b></label>
+        <br>
+        <input type="text" placeholder="Enter fields" name="input"></input>
+        <br>
+        <button type="submit" style="background-color:#EC8903"><b>Ready</b></button>
+      </div>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<center>
+  <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><b>Choose fields from Teachers Table</b></button>
+</center>
+
+<div id="id02" class="modal">
+  <form class ="modal-content animate" method = "post" action = "dynamic_select_teacher.php">
+    <div class="container">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+      <div class="container">
+        <label for="var"><b>Enter fields from table Teachers in the specific format: (username, firstname, lastname, email, field): </b></label>
+        <br>
+        <input type="text" placeholder="Enter fields" name="input"></input>
+        <br>
+        <button type="submit" style="background-color:#EC8903"><b>Ready</b></button>
+      </div>
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<center>
+  <button onclick="document.getElementById('id03').style.display='block'" style="width:auto;"><b>Choose fields from Courses Table</b></button>
+</center>
+
+<div id="id03" class="modal">
+  <form class ="modal-content animate" method = "post" action = "dynamic_select_course.php">
+    <div class="container">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+      <div class="container">
+        <label for="var"><b>Enter fields from table Courses in the specific format: (title, field, semester): </b></label>
+        <br>
+        <input type="text" placeholder="Enter fields" name="input"></input>
+        <br>
+        <button type="submit" style="background-color:#EC8903"><b>Ready</b></button>
+      </div>
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+var modal3 = document.getElementById('id03');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+
+window.onclick = function(event) {
+    if (event.target == modal3) {
+        modal2.style.display = "none";
+    }
+}
+</script>
+<script>
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+</script>
+<center>
+<button type = "submit" style="background-color:#EC8903" onclick="goBack()">Go Back</button>
+</center>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>
