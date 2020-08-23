@@ -5,6 +5,7 @@ A web application developed for the course "Database Systems 2". The use of the 
 The administrator can create all the necessary tables and views for the database after using the unique credentials to connect to the application. Specifically, the administrator is able to:
 
 1.Show all students (student, teacher).select_all_students.php)
+
 2.Show all teachers (student, teacher).select_all_teachers.php)
 3.Show all courses (student, teacher).select_all_courses.php)
 4.Show the courses that one student is enrolled in (student, teacher).select_course_by_teacher.php)
