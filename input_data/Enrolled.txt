@@ -1,0 +1,14 @@
+ptserpe	Concurrent Programming	8
+aikyriakou	Database Systems	10
+syfanti	Operating Systems	8
+mpapagatsia	Java	8.5
+chvasileiou	VLSI	7
+chvasileiou	Operating Systems	9
+ptserpe	Java	7.5
+dvoulgaris	VLSI	9
+zmilousis	Concurrent Programming	7
+ilytra	Database Systems	6.5
+aikyriakou	VLSI	6
+ptserpe	Networking 1	6.5
+syfanti	Java	9
+mpapagatsia	Neurofuzzy Computing	7.5	

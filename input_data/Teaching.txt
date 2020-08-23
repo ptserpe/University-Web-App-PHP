@@ -1,0 +1,9 @@
+chantonopoulos	Operating Systems	4
+chantonopoulos	Programming 1	6
+ytsompanopoulou	Calculus 1	6
+etousidou	Database Systems	4
+akorakis	Networking 1	5
+slalis	Concurrent Programming	4
+nbellas	VLSI	3
+gthanos	Java	4
+	

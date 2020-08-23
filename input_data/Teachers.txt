@@ -1,0 +1,8 @@
+dkatsar	1234	Dimitrios	Katsaros	dkatsar@mail.com	Software
+etousidou	1234	Eleni	Tousidou	etousidou@mail.com	Software	
+gthanos	1234	Georgios	Thanos	gthanos@mail.com	Software
+nbellas	1234	Nikolaos	Bellas	nbellas@mail.com	Hardware
+slalis	1234	Spyros	Lalis	slalis@mail.com	Software
+ytsompanopoulou	1234	Yota	Tsompanopoulou	ytsompanopoulou@mail.com	Mathematics
+akorakis	1234	Athanasios	Korakis	akorakis@mail.com	Signals, Telecommunications and Networks
+chantonopoulos	1234	Christos	Antonopoulos	chantonopoulos@mail.com	Software	

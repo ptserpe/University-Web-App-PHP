@@ -1,1 +1,9 @@
-
+Programming 1	Software	1
+Calculus 1	Mathematics	1
+Java	Software	4
+Database Systems	Software	7
+Networking 1	Signals, Telecommunications and Networks	3
+Neurofuzzy Computing	Software	9
+VLSI	Hardware	5
+Concurrent Programming	Software	5
+Operating Systems	Software	6
