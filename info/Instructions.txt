@@ -1,1 +1,37 @@
+Χρησιμοποιήσαμε τo LAMP Server (Linux, Apache, MySQL, PHP) σε Ubuntu.
+Ο συγκερκιμένος server χρησιμοποιείται ως local server για την ανάπτυξη
+μιας εφαρμογής στον localhost.
+Για την εγκατάστασή του ακολουθήσαμε τις παρακάτω εντολές:
+    1) sudo apt install apache2
+    2) sudo apt install mysql-server
+    3) sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc
+      php-gd php-mysql php-mbstring php-xml libapache2-mod-php
 
+Δημιουργία βάσης στην MySQL:
+    Εντολή σύνδεσης: mysql -u root -p
+    Εντολή δημιουργίας βάσης: CREATE DATABASE db2; (όπου db2 το όνομα της βάσης
+    που δημιουργήσαμε)
+
+Σύνδεση στο server:
+    php -S localhost:8000
+    
+Σύνδεση στη βάση δεδομένων μέσω php:
+Για κάθε σύνδεση που επιθυμούμε να πραγματοποιήσουμε στη βάση,
+χρησιμοποιούμε την mysqli_connect με στοιχεία σύνδεσης:
+    Server name = "localhost"
+    username = "root"
+    password = ""
+    Database name = "db2"
+
+Απαραίτητες ρυθμίσεις MySQL:
+    SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+
+Σύνδεση στην web εφαρμογή:
+    Μέσω του browser στη διεύθυνση "localhost:8000/app.html"
+
+Εισαγωγή data στην εφαρμογή μέσω αρχείου:
+    load data local infile 'input_data/Students.txt' into table Students;
+    load data local infile 'input_data/Teachers.txt' into table Teachers;
+    load data local infile 'input_data/Courses.txt' into table Courses;
+    load data local infile 'input_data/Enrolled.txt' into table Enrolled;
+    load data local infile 'input_data/Teaching.txt' into table Teaches;
